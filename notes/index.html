@@ -1,0 +1,28 @@
+---
+layout: default
+nav: notes
+title: Notes
+description: Study notes and learning journal by Ruth Villalobos, covering data science, machine learning, and AI.
+---
+  <main class="wrap page">
+    <p class="eyebrow">Learning journal</p>
+    <h1>Study notes</h1>
+    <p class="lead">What I'm learning in data science, machine learning, and AI, written down as I go.</p>
+
+    {% if site.posts.size > 0 %}
+    <ol class="note-list">
+      {% for note in site.posts %}
+      <li>
+        <a href="{{ note.url | relative_url }}">
+          <span class="note-date">{{ note.date | date: '%b %-d, %Y' }}</span>
+          <span class="note-title">{{ note.title }}</span>
+          {% if note.description %}<span class="note-desc">{{ note.description }}</span>{% endif %}
+          {% if note.tags.size > 0 %}<ul class="tags small">{% for t in note.tags %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p class="empty">No notes yet. Check back soon.</p>
+    {% endif %}
+  </main>

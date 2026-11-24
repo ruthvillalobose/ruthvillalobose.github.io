@@ -1,0 +1,26 @@
+title: Ruth Villalobos
+description: Portfolio of Ruth Daniela Villalobos, Data Scientist, AI Engineer and Technical Writer specializing in experimentation, machine learning, and LLM-powered analytics.
+url: https://ruthvillalobose.github.io
+
+markdown: kramdown
+highlighter: rouge
+
+# Study notes live in _posts/ and are published at /notes/<name>/
+permalink: /notes/:title/
+
+exclude:
+  - README.md
+  - resume.pdf
+
+# Personal projects: one Markdown file per project in _projects/, published at /projects/<name>/
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Layout applied automatically, so files don't need a "layout:" line
+defaults:
+  - scope: { type: projects }
+    values: { layout: project }
+  - scope: { type: posts }
+    values: { layout: note }

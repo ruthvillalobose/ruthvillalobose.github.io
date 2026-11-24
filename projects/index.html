@@ -1,0 +1,47 @@
+---
+layout: default
+nav: projects
+title: Projects
+description: Personal data science, data analysis, and documentation projects by Ruth Villalobos.
+---
+  <main class="wrap page">
+    <p class="eyebrow">Personal projects</p>
+    <h1>Projects</h1>
+    <p class="lead">Things I build on my own time to explore new ideas in data science, analysis, and technical documentation.</p>
+
+    <!-- Each project is a Markdown file in _projects/ with a "category" and "order".
+         Projects with no text yet show as "In progress". Categories appear in the order below. -->
+    {% assign categories = "Data Science,Data Analysis,Documentation" | split: "," %}
+    <nav class="cat-jump" aria-label="Project categories">
+      {% for cat in categories %}<a href="#{{ cat | slugify }}">{{ cat }}</a>{% endfor %}
+    </nav>
+
+    {% for cat in categories %}
+    {% assign projects = site.projects | where: "category", cat | sort: "order" %}
+    <section class="cat" id="{{ cat | slugify }}">
+      <h2>{{ cat }} <span class="count">{{ projects.size }}</span></h2>
+      {% if projects.size == 0 %}
+      <p class="empty">Projects coming soon.</p>
+      {% else %}
+      <ol class="project-list">
+        {% for p in projects %}
+        {% assign body = p.content | strip_html | strip %}
+        <li>
+          {% if body != '' %}
+          <a href="{{ p.url | relative_url }}">
+            <span class="project-name">{{ p.title }}</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          {% else %}
+          <div class="project-soon">
+            <span class="project-name">{{ p.title }}</span>
+            <span class="badge">In progress</span>
+          </div>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </main>
