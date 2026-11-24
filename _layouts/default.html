@@ -18,6 +18,7 @@
         <a href="{{ '/' | relative_url }}" {% if page.nav == 'home' %}class="active" aria-current="page"{% endif %}>Home</a>
         <a href="{{ '/projects/' | relative_url }}" {% if page.nav == 'projects' %}class="active" aria-current="page"{% endif %}>Projects</a>
         <a href="{{ '/notes/' | relative_url }}" {% if page.nav == 'notes' %}class="active" aria-current="page"{% endif %}>Notes</a>
+        <a href="{{ '/hobbies/' | relative_url }}" {% if page.nav == 'hobbies' %}class="active" aria-current="page"{% endif %}>Hobbies</a>
       </nav>
     </div>
   </header>
@@ -27,5 +28,18 @@
   <footer class="wrap footer">
     <p>© {{ site.time | date: '%Y' }} Ruth Villalobos · Built with GitHub Pages</p>
   </footer>
+
+  <script>
+    // Fade sections in as they scroll into view (skipped if the visitor prefers reduced motion)
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.documentElement.classList.add('js-reveal');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>

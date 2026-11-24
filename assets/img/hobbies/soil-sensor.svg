@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Illustration of a soil moisture sensor in a plant pot wired to a microcontroller">
+  <rect width="400" height="300" fill="#eeebff"/>
+  <g opacity=".35" stroke="#5b4bdb" stroke-width="2" fill="none"><path d="M300 70 q14 14 0 28"/><path d="M312 60 q24 24 0 48"/><path d="M324 50 q34 34 0 68"/></g>
+  <!-- plant -->
+  <path d="M130 170 v-60" stroke="#2f8556" stroke-width="4"/>
+  <path d="M130 140 q-46 -6 -56 -46 q44 0 56 46z" fill="#3c9a64"/>
+  <path d="M130 122 q44 -10 52 -52 q-42 6 -52 52z" fill="#57b37c"/>
+  <path d="M130 112 q-14 -30 0 -60 q14 30 0 60z" fill="#6cc48e"/>
+  <!-- pot -->
+  <path d="M70 175 h120 l-14 90 h-92z" fill="#d9774b"/><rect x="64" y="166" width="132" height="16" rx="4" fill="#c4623a"/>
+  <rect x="72" y="170" width="116" height="8" fill="#6b4a35"/>
+  <!-- sensor probe -->
+  <path d="M160 140 h14 v60 l-3 10 h-1 v-10 h-6 v10 h-1 l-3 -10z" fill="#2c6e9e"/>
+  <rect x="158" y="132" width="18" height="14" rx="2" fill="#1f5a84"/>
+  <!-- wire -->
+  <path d="M167 132 C170 80 230 80 250 150" stroke="#e25555" stroke-width="3" fill="none"/>
+  <path d="M171 132 C176 90 236 92 256 150" stroke="#333" stroke-width="3" fill="none"/>
+  <!-- board -->
+  <rect x="228" y="150" width="120" height="76" rx="6" fill="#1f7a5a"/>
+  <rect x="270" y="170" width="36" height="36" rx="3" fill="#1b1b24"/>
+  <g fill="#d8c05a"><rect x="236" y="156" width="6" height="6"/><rect x="248" y="156" width="6" height="6"/><rect x="260" y="156" width="6" height="6"/><rect x="236" y="212" width="6" height="6"/><rect x="248" y="212" width="6" height="6"/><rect x="260" y="212" width="6" height="6"/></g>
+  <circle cx="330" cy="168" r="6" fill="#ffd54a"/><circle cx="330" cy="168" r="11" fill="#ffd54a" opacity=".3"/>
+  <rect x="318" y="196" width="22" height="16" rx="2" fill="#c9ccd6"/>
+  <text x="288" y="246" font-family="monospace" font-size="13" fill="#5b4bdb" text-anchor="middle">moisture: 38%</text>
+</svg>

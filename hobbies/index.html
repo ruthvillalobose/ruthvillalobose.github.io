@@ -1,0 +1,62 @@
+---
+layout: default
+nav: hobbies
+title: Hobbies
+description: Off the clock, Ruth Villalobos automates the care of her plants with sensors, microcontrollers and a bit of data.
+---
+  <main class="wrap page">
+    <p class="eyebrow">Off the clock</p>
+    <h1>Hobbies</h1>
+    <p class="lead">When I'm not working with data at my job, I'm usually using it to keep my plants alive.</p>
+
+    <!-- TODO: replace the illustrations in assets/img/hobbies/ with your own photos (same file names, or update the src below) -->
+    <section class="hobby-feature reveal">
+      <div class="hobby-text">
+        <h2><span class="hobby-icon" aria-hidden="true">🌱</span> Automating plant care</h2>
+        <p>
+          My favorite side project is a small system that takes care of my plants for me.
+          Sensors in the soil measure moisture, a microcontroller decides when a plant is thirsty,
+          and a little pump waters it automatically. Every reading is logged, so I can chart
+          how each plant is doing and tune the system over time.
+        </p>
+        <p>
+          It mixes everything I enjoy: electronics, a bit of code, and data analysis, plus the
+          satisfaction of seeing something green grow.
+        </p>
+        <ul class="tags">
+          <li>Soil sensors</li><li>Microcontrollers</li><li>Python</li><li>IoT</li><li>Data logging</li><li>Automation</li>
+        </ul>
+      </div>
+      <figure class="hobby-hero">
+        <img src="{{ '/assets/img/hobbies/soil-sensor.svg' | relative_url }}" alt="Soil moisture sensor in a plant pot wired to a microcontroller" width="400" height="300">
+      </figure>
+    </section>
+
+    <section class="reveal">
+      <h2 class="section-title">How it works</h2>
+      <ol class="steps">
+        <li><span class="step-icon" aria-hidden="true">📡</span><h3>Sense</h3><p>Sensors read soil moisture every few minutes.</p></li>
+        <li><span class="step-icon" aria-hidden="true">💾</span><h3>Log</h3><p>Readings are saved, ready to analyze and chart.</p></li>
+        <li><span class="step-icon" aria-hidden="true">🧠</span><h3>Decide</h3><p>If moisture drops below a threshold, it's time to water.</p></li>
+        <li><span class="step-icon" aria-hidden="true">💧</span><h3>Water</h3><p>A small pump delivers just the right amount of water.</p></li>
+      </ol>
+    </section>
+
+    <section class="reveal">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery">
+        <figure>
+          <img src="{{ '/assets/img/hobbies/plant-shelf.svg' | relative_url }}" alt="Potted plants on a shelf by a window" loading="lazy" width="400" height="300">
+          <figcaption>My plant shelf</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ '/assets/img/hobbies/watering-system.svg' | relative_url }}" alt="Water tank and pump connected to a plant pot with a tube" loading="lazy" width="400" height="300">
+          <figcaption>The automatic watering setup</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ '/assets/img/hobbies/moisture-dashboard.svg' | relative_url }}" alt="Laptop showing a chart of soil moisture over a week with watering events" loading="lazy" width="400" height="300">
+          <figcaption>A week of moisture data and watering events</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
