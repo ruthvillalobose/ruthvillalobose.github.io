@@ -1,2 +1,5 @@
 resume.pdf
 .DS_Store
+*.csv
+*.csv.gz
+*.parquet
